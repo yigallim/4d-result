@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-mono: var(--font-mono);
+}
+
+html,
+body {
+  @apply h-full w-full m-0 p-0;
+}
+
+body > main {
+  @apply h-full w-full overflow-auto;
+}
