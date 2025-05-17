@@ -59,11 +59,14 @@ const ResultCard = ({
         <div className="bg-neutral-800 text-white text-sm font-medium px-4 py-1.5">
           Special 特别奖
         </div>
-        <div className="grid grid-cols-5 gap-2 mt-2">
+        <div className="grid grid-cols-5 gap-1 mt-2">
           {data.special.map((prize, i) => (
             <div
               key={`special-${i}`}
-              className="bg-gray-100 text-center p-2 rounded font-mono text-lg"
+              className={cn(
+                "bg-gray-100 text-center py-2 px-1 md:px-2 rounded font-mono",
+                prize === "----" ? "text-base" : "text-2xl"
+              )}
             >
               {prize}
             </div>
@@ -76,11 +79,14 @@ const ResultCard = ({
         <div className="bg-neutral-800 text-white text-sm font-medium px-4 py-1.5">
           Consolation 安慰奖
         </div>
-        <div className="grid grid-cols-5 gap-2 mt-2">
+        <div className="grid grid-cols-5 gap-1 mt-2">
           {data.consolation.map((prize, i) => (
             <div
               key={`consolation-${i}`}
-              className="bg-gray-100 text-center p-2 rounded font-mono text-lg"
+              className={cn(
+                "bg-gray-100 text-center py-2 px-1 md:px-2 rounded font-mono",
+                prize === "----" ? "text-base" : "text-2xl"
+              )}
             >
               {prize}
             </div>
